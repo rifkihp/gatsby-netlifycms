@@ -1,0 +1,68 @@
+@import "../../styles/main";
+
+.card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 285px;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+  color: $color-white;
+  transition: all cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s;
+
+  .gatsby-image-wrapper {
+    height: 100%;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  .background {
+    position: absolute;
+    z-index: 1;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, black, rgba(0, 0, 0, 0));
+  }
+
+  .header {
+    position: absolute;
+    z-index: 1;
+
+    h1 {
+      font-size: 28px;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    bottom: 0;
+  }
+}
+
+@media (min-width: $breakpoint-mobile) {
+  .card-wrapper {
+    width: 340px;
+    height: 455px;
+
+    &:hover {
+      box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.4);
+      transform: scale(1.03, 1.03);
+    }
+
+    .header {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  }
+}

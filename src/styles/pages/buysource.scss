@@ -1,0 +1,8 @@
+@import "../variables";
+
+.card-list-buysource {
+  padding: 16px 16px 36px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}

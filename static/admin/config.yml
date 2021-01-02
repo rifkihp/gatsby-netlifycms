@@ -1,0 +1,105 @@
+local_backend: true
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "Blog"
+    label: "blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Cover", name: "cover", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "Buy Source"
+    label: "buysource"
+    folder: "src/pages/buysource"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "buysource-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Cover", name: "cover", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
+  - name: "Pages"
+    label: "pages"
+    files:
+      - name: "About"
+        label: "about"
+        file: "src/pages/about/index.md"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - name: "Projects"
+        label: "projects"
+        file: "src/pages/projects/index.md"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "projects-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  
+  - name: "Components"
+    label: "components"
+    files:
+      - name: "Bio"
+        label: "bio"
+        file: "src/components/Bio/index.md"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "Bio",
+            }
+          - { label: "What's your name ?'", name: "name", widget: "string" }
+          - { label: "What do you do ?", name: "description", widget: "text" }
+          - { label: "Upload your photo", name: "cover", widget: "image" }
+      - name: "Header"
+        label: "header"
+        file: "src/components/Header/index.md"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "Header",
+            }
+          - { label: "Website Title", name: "websiteTitle", widget: "string" }
+          - { label: "About Title", name: "aboutTitle", widget: "string" }
+          - { label: "Downloads Title", name: "downloadsTitle", widget: "string" }
+          - { label: "Source for Sale Title", name: "sourceforsaleTitle", widget: "string" }

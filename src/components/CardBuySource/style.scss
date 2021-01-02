@@ -1,0 +1,29 @@
+@import "../../styles/main";
+
+.card-buysource {
+  border: 1px solid #d3d3d3;
+  border-radius: .25rem;
+
+  .bg-img {
+    background-size: cover;
+    min-height: 180px;
+    background-position: center;
+    background-color: #ccc;
+    
+    img {
+      border-top-left-radius: .25rem;
+      border-top-right-radius: .25rem;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  
+  .content {
+    padding: 15px;
+  
+    a {
+      text-decoration: none;
+      line-height: normal;
+    }
+  }
+}

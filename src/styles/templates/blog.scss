@@ -1,0 +1,22 @@
+@import "../variables";
+
+.blog-wrapper {
+  margin: 16px;
+  width: calc(100% - 16px);
+  min-height: 82vh;
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: $breakpoint-mobile) {
+  .blog-wrapper {
+    margin: 16px auto;
+    width: 680px;
+
+    .title {
+      font-size: 48px;
+    }
+  }
+}
