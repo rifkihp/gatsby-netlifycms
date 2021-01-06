@@ -19,24 +19,26 @@ class BuysourcePage extends Component {
       <Layout>
         <SEO title="Buy Source" keywords={[`buysource`, `page`]} />
         <Bio />
-        <div className="card-list-buysource">
-            {edges.map(({ node }) => {
-              return (
-                <CardBuySource
-                  key={node.id}
-                  title={node.frontmatter.title}
-                  description={node.frontmatter.description}
-                  dateTime={node.frontmatter.date}
-                  readTime={node.timeToRead}
-                  coverImage={
-                    node.frontmatter.cover &&
-                    node.frontmatter.cover.childImageSharp.fluid
-                  }
-                  linkPost={node.fields.slug}
-                />
-              )
-            })}
-        </div>
+        
+          <div className="card-list-buysource">
+              {edges.map(({ node }) => {
+                return (
+                  <CardBuySource
+                    key={node.id}
+                    title={node.frontmatter.title}
+                    description={node.frontmatter.description}
+                    dateTime={node.frontmatter.date}
+                    readTime={node.timeToRead}
+                    coverImage={
+                      node.frontmatter.cover &&
+                      node.frontmatter.cover.childImageSharp.fluid
+                    }
+                    linkPost={node.fields.slug}
+                  />
+                )
+              })}
+          </div>
+        
       </Layout>
     )
   }
